@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Service
+metadata:
+  name: svc2
+  description: Service 2
+  tags:
+    - "microservice"
+spec:
+  type: backend
+  owner: john@example.com
+  lifecycle: experimental
+  dependsOn:
+    - url: http://localhost:8083/svc3/
+  urls:
+    - http://localhost:8082/svc2/
