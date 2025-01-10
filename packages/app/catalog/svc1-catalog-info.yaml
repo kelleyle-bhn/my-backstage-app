@@ -10,6 +10,6 @@ spec:
   owner: john@example.com
   lifecycle: experimental
   dependsOn:
-    - url: http://localhost:8082/svc2/
+    - url: http://localhost:8082
   urls:
     - http://localhost:8081/svc1/
