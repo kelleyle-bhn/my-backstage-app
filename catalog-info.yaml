@@ -24,4 +24,4 @@ spec:
   type: openapi
   lifecycle: experimental
   owner: kelley.le2@bhn.com
-  definition: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc1-openapi.yaml
+  definition: https://raw.githubusercontent.com/kelleyle-bhn/my-backstage-app/refs/heads/main/packages/app/src/catalog/svc1-openapi.yaml
