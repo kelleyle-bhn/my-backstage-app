@@ -18,6 +18,8 @@ metadata:
   name: service-chain
   description: Calls a chain of Spring Boot backend services that prints a message.
   owner: kelley.le2@bhn.com
+  links:
+    - url: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/catalog-info.yaml
 spec:
   type: openapi
   lifecycle: experimental
