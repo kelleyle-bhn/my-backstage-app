@@ -32,6 +32,10 @@ backend:
     connection: ':memory:'
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
+  reading:
+    allow:
+      - host: localhost:8000
+
 integrations:
   github:
     - host: github.com
@@ -94,6 +98,18 @@ catalog:
       rules:
         - allow: [User, Group]
 
+
+    # - type: file
+    #   target: ../../packages/app/src/catalog/svc1-openapi.yaml
+
+    # - type: url
+    #   target: https://raw.githubusercontent.com/kelleyle-bhn/my-backstage-app/refs/heads/main/catalog-info.yaml
+
+    # - type: url
+    #   target: "http://localhost:8000/catalog-info.yaml"
+
+    # - type: url
+    #   target: "http://localhost:8000/packages/app/src/catalog/svc1-openapi.yaml"
     ## Uncomment these lines to add more example data
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
@@ -103,6 +119,9 @@ catalog:
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
     #   rules:
     #     - allow: [User, Group]
+  # integrations:
+  #   github:
+  #     token: GHSAT0AAAAAAC5I4SRSXANBN3CIPEW43JSKZ4FRY3A
 
 kubernetes:
   # see https://backstage.io/docs/features/kubernetes/configuration for kubernetes configuration options
