@@ -1,3 +1,5 @@
+// Global side navigation bar
+
 import React, { PropsWithChildren } from 'react';
 import { makeStyles } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
@@ -79,7 +81,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         <SidebarItem icon={LibraryBooks} to="docs" text="Docs" />
         <SidebarItem icon={CreateComponentIcon} to="create" text="Create..." />
         
-        <SidebarItem icon={StarIcon} to="svc1" text="Service 1" />
+        <SidebarItem icon={StarIcon} to="service-chain" text="Service Chain" />
         {/* End global nav */}
         <SidebarDivider />
         <SidebarScrollWrapper>

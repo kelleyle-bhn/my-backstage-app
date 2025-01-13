@@ -1,0 +1,605 @@
+openapi: 3.1.0
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8083
+  description: Generated server url
+paths:
+  "/svc3":
+    get:
+      tags:
+      - svc-3-controller
+      operationId: getSvc3Response
+      responses:
+        '200':
+          description: OK
+          content:
+            "*/*":
+              schema:
+                type: string
+  "/svc3/":
+    get:
+      tags:
+      - svc-3-controller
+      operationId: redirectToSvc3
+      responses:
+        '200':
+          description: OK
+          content:
+            "*/*":
+              schema:
+                "$ref": "#/components/schemas/RedirectView"
+components:
+  schemas:
+    ApplicationContext:
+      type: object
+      properties:
+        applicationName:
+          type: string
+        startupDate:
+          type: integer
+          format: int64
+        autowireCapableBeanFactory:
+          "$ref": "#/components/schemas/AutowireCapableBeanFactory"
+        parent:
+          "$ref": "#/components/schemas/ApplicationContext"
+        id:
+          type: string
+        displayName:
+          type: string
+        environment:
+          "$ref": "#/components/schemas/Environment"
+        beanDefinitionCount:
+          type: integer
+          format: int32
+        beanDefinitionNames:
+          type: array
+          items:
+            type: string
+        parentBeanFactory:
+          "$ref": "#/components/schemas/BeanFactory"
+        classLoader:
+          type: object
+          properties:
+            name:
+              type: string
+            registeredAsParallelCapable:
+              type: boolean
+            parent:
+              type: object
+              properties:
+                name:
+                  type: string
+                registeredAsParallelCapable:
+                  type: boolean
+                unnamedModule:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    classLoader:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        registeredAsParallelCapable:
+                          type: boolean
+                        definedPackages:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              sealed:
+                                type: boolean
+                              annotations:
+                                type: array
+                                items:
+                                  type: object
+                              declaredAnnotations:
+                                type: array
+                                items:
+                                  type: object
+                              specificationTitle:
+                                type: string
+                              specificationVersion:
+                                type: string
+                              specificationVendor:
+                                type: string
+                              implementationTitle:
+                                type: string
+                              implementationVersion:
+                                type: string
+                              implementationVendor:
+                                type: string
+                        defaultAssertionStatus:
+                          type: boolean
+                          writeOnly: true
+                    descriptor:
+                      type: object
+                      properties:
+                        open:
+                          type: boolean
+                        automatic:
+                          type: boolean
+                    named:
+                      type: boolean
+                    annotations:
+                      type: array
+                      items:
+                        type: object
+                    declaredAnnotations:
+                      type: array
+                      items:
+                        type: object
+                    packages:
+                      type: array
+                      items:
+                        type: string
+                      uniqueItems: true
+                    nativeAccessEnabled:
+                      type: boolean
+                    layer:
+                      type: object
+                definedPackages:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      sealed:
+                        type: boolean
+                      annotations:
+                        type: array
+                        items:
+                          type: object
+                      declaredAnnotations:
+                        type: array
+                        items:
+                          type: object
+                      specificationTitle:
+                        type: string
+                      specificationVersion:
+                        type: string
+                      specificationVendor:
+                        type: string
+                      implementationTitle:
+                        type: string
+                      implementationVersion:
+                        type: string
+                      implementationVendor:
+                        type: string
+                defaultAssertionStatus:
+                  type: boolean
+                  writeOnly: true
+            unnamedModule:
+              type: object
+              properties:
+                name:
+                  type: string
+                classLoader:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    registeredAsParallelCapable:
+                      type: boolean
+                    definedPackages:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                          sealed:
+                            type: boolean
+                          annotations:
+                            type: array
+                            items:
+                              type: object
+                          declaredAnnotations:
+                            type: array
+                            items:
+                              type: object
+                          specificationTitle:
+                            type: string
+                          specificationVersion:
+                            type: string
+                          specificationVendor:
+                            type: string
+                          implementationTitle:
+                            type: string
+                          implementationVersion:
+                            type: string
+                          implementationVendor:
+                            type: string
+                    defaultAssertionStatus:
+                      type: boolean
+                      writeOnly: true
+                descriptor:
+                  type: object
+                  properties:
+                    open:
+                      type: boolean
+                    automatic:
+                      type: boolean
+                named:
+                  type: boolean
+                annotations:
+                  type: array
+                  items:
+                    type: object
+                declaredAnnotations:
+                  type: array
+                  items:
+                    type: object
+                packages:
+                  type: array
+                  items:
+                    type: string
+                  uniqueItems: true
+                nativeAccessEnabled:
+                  type: boolean
+                layer:
+                  type: object
+            definedPackages:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  sealed:
+                    type: boolean
+                  annotations:
+                    type: array
+                    items:
+                      type: object
+                  declaredAnnotations:
+                    type: array
+                    items:
+                      type: object
+                  specificationTitle:
+                    type: string
+                  specificationVersion:
+                    type: string
+                  specificationVendor:
+                    type: string
+                  implementationTitle:
+                    type: string
+                  implementationVersion:
+                    type: string
+                  implementationVendor:
+                    type: string
+            defaultAssertionStatus:
+              type: boolean
+              writeOnly: true
+    AutowireCapableBeanFactory:
+      type: object
+    BeanFactory:
+      type: object
+    Environment:
+      type: object
+      properties:
+        activeProfiles:
+          type: array
+          items:
+            type: string
+        defaultProfiles:
+          type: array
+          items:
+            type: string
+    FilterRegistration:
+      type: object
+      properties:
+        servletNameMappings:
+          type: array
+          items:
+            type: string
+        urlPatternMappings:
+          type: array
+          items:
+            type: string
+        initParameters:
+          type: object
+          additionalProperties:
+            type: string
+        name:
+          type: string
+        className:
+          type: string
+    HttpStatusCode:
+      type: object
+      properties:
+        is4xxClientError:
+          type: boolean
+        is5xxServerError:
+          type: boolean
+        is1xxInformational:
+          type: boolean
+        is2xxSuccessful:
+          type: boolean
+        is3xxRedirection:
+          type: boolean
+        error:
+          type: boolean
+    JspConfigDescriptor:
+      type: object
+      properties:
+        taglibs:
+          type: array
+          items:
+            "$ref": "#/components/schemas/TaglibDescriptor"
+        jspPropertyGroups:
+          type: array
+          items:
+            "$ref": "#/components/schemas/JspPropertyGroupDescriptor"
+    JspPropertyGroupDescriptor:
+      type: object
+      properties:
+        urlPatterns:
+          type: array
+          items:
+            type: string
+        elIgnored:
+          type: string
+        pageEncoding:
+          type: string
+        scriptingInvalid:
+          type: string
+        isXml:
+          type: string
+        errorOnELNotFound:
+          type: string
+        includePreludes:
+          type: array
+          items:
+            type: string
+        includeCodas:
+          type: array
+          items:
+            type: string
+        deferredSyntaxAllowedAsLiteral:
+          type: string
+        trimDirectiveWhitespaces:
+          type: string
+        errorOnUndeclaredNamespace:
+          type: string
+        defaultContentType:
+          type: string
+        buffer:
+          type: string
+    RedirectView:
+      type: object
+      properties:
+        applicationContext:
+          "$ref": "#/components/schemas/ApplicationContext"
+        servletContext:
+          "$ref": "#/components/schemas/ServletContext"
+          writeOnly: true
+        contentType:
+          type: string
+        requestContextAttribute:
+          type: string
+        staticAttributes:
+          type: object
+          additionalProperties:
+            type: object
+        exposePathVariables:
+          type: boolean
+        exposeContextBeansAsAttributes:
+          type: boolean
+          writeOnly: true
+        exposedContextBeanNames:
+          type: array
+          items:
+            type: string
+          writeOnly: true
+        beanName:
+          type: string
+        url:
+          type: string
+        contextRelative:
+          type: boolean
+          writeOnly: true
+        http10Compatible:
+          type: boolean
+          writeOnly: true
+        exposeModelAttributes:
+          type: boolean
+          writeOnly: true
+        encodingScheme:
+          type: string
+          writeOnly: true
+        statusCode:
+          "$ref": "#/components/schemas/HttpStatusCode"
+          writeOnly: true
+        expandUriTemplateVariables:
+          type: boolean
+          writeOnly: true
+        propagateQueryParams:
+          type: boolean
+          writeOnly: true
+        hosts:
+          type: array
+          items:
+            type: string
+        redirectView:
+          type: boolean
+        propagateQueryProperties:
+          type: boolean
+        attributesMap:
+          type: object
+          additionalProperties:
+            type: object
+        attributesCSV:
+          type: string
+          writeOnly: true
+        attributes:
+          type: object
+          additionalProperties:
+            type: string
+          writeOnly: true
+    ServletContext:
+      type: object
+      properties:
+        effectiveMajorVersion:
+          type: integer
+          format: int32
+        effectiveMinorVersion:
+          type: integer
+          format: int32
+        initParameterNames:
+          type: object
+        serverInfo:
+          type: string
+        servletContextName:
+          type: string
+        servletRegistrations:
+          type: object
+          additionalProperties:
+            "$ref": "#/components/schemas/ServletRegistration"
+        filterRegistrations:
+          type: object
+          additionalProperties:
+            "$ref": "#/components/schemas/FilterRegistration"
+        sessionCookieConfig:
+          "$ref": "#/components/schemas/SessionCookieConfig"
+        sessionTrackingModes:
+          type: array
+          items:
+            type: string
+            enum:
+            - COOKIE
+            - URL
+            - SSL
+          uniqueItems: true
+          writeOnly: true
+        defaultSessionTrackingModes:
+          type: array
+          items:
+            type: string
+            enum:
+            - COOKIE
+            - URL
+            - SSL
+          uniqueItems: true
+        effectiveSessionTrackingModes:
+          type: array
+          items:
+            type: string
+            enum:
+            - COOKIE
+            - URL
+            - SSL
+          uniqueItems: true
+        jspConfigDescriptor:
+          "$ref": "#/components/schemas/JspConfigDescriptor"
+        virtualServerName:
+          type: string
+        sessionTimeout:
+          type: integer
+          format: int32
+        requestCharacterEncoding:
+          type: string
+        responseCharacterEncoding:
+          type: string
+        contextPath:
+          type: string
+        attributeNames:
+          type: object
+        classLoader:
+          type: object
+          properties:
+            name:
+              type: string
+            registeredAsParallelCapable:
+              type: boolean
+            definedPackages:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  sealed:
+                    type: boolean
+                  annotations:
+                    type: array
+                    items:
+                      type: object
+                  declaredAnnotations:
+                    type: array
+                    items:
+                      type: object
+                  specificationTitle:
+                    type: string
+                  specificationVersion:
+                    type: string
+                  specificationVendor:
+                    type: string
+                  implementationTitle:
+                    type: string
+                  implementationVersion:
+                    type: string
+                  implementationVendor:
+                    type: string
+            defaultAssertionStatus:
+              type: boolean
+              writeOnly: true
+        majorVersion:
+          type: integer
+          format: int32
+        minorVersion:
+          type: integer
+          format: int32
+    ServletRegistration:
+      type: object
+      properties:
+        runAsRole:
+          type: string
+        mappings:
+          type: array
+          items:
+            type: string
+        initParameters:
+          type: object
+          additionalProperties:
+            type: string
+        name:
+          type: string
+        className:
+          type: string
+    SessionCookieConfig:
+      type: object
+      properties:
+        maxAge:
+          type: integer
+          format: int32
+        httpOnly:
+          type: boolean
+        secure:
+          type: boolean
+        domain:
+          type: string
+        path:
+          type: string
+        name:
+          type: string
+        attributes:
+          type: object
+          additionalProperties:
+            type: string
+        comment:
+          type: string
+          deprecated: true
+    TaglibDescriptor:
+      type: object
+      properties:
+        taglibURI:
+          type: string
+        taglibLocation:
+          type: string

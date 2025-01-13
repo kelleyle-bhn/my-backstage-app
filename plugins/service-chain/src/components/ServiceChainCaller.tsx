@@ -1,3 +1,5 @@
+// Page to call service chain
+
 import React, { useState } from 'react';
 import { Button, Typography, Box } from '@material-ui/core';
 
@@ -31,7 +33,7 @@ export const ServiceChainCaller = () => {
   return (
     <Box>
       <Typography variant="h4" gutterBottom>
-        Call Service Chain (Svc1 → Svc2 → Svc3)
+        Call Service Chain
       </Typography>
       <Button variant="contained" color="primary" onClick={callServiceChain} disabled={loading}>
         {loading ? 'Loading...' : 'Call Services'}

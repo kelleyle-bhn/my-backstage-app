@@ -1,3 +1,5 @@
+// Displays all types of entities
+
 import React from 'react';
 import { Button, Grid } from '@material-ui/core';
 import {
