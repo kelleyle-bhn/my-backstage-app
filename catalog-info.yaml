@@ -31,7 +31,7 @@ spec:
   lifecycle: experimental
   owner: kelley.le2@bhn.com
   definition: 
-    $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc1-openapi.yaml
+    $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/openapi/svc1-openapi.yaml
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -50,7 +50,7 @@ spec:
   lifecycle: experimental
   owner: kelley.le2@bhn.com
   definition: 
-    $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc2-openapi.yaml
+    $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/openapi/svc2-openapi.yaml
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -69,4 +69,4 @@ spec:
   lifecycle: experimental
   owner: kelley.le2@bhn.com
   definition: 
-    $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc3-openapi.yaml
+    $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/openapi/svc3-openapi.yaml
