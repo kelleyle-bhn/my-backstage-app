@@ -24,6 +24,8 @@ metadata:
     - springboot
     - backend
     - api
+  links:
+    - url: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/catalog-info.yaml
 spec:
   type: openapi
   lifecycle: experimental
@@ -41,6 +43,8 @@ metadata:
     - springboot
     - backend
     - api
+  links:
+    - url: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/catalog-info.yaml
 spec:
   type: openapi
   lifecycle: experimental
@@ -58,6 +62,8 @@ metadata:
     - springboot
     - backend
     - api
+  links:
+    - url: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/catalog-info.yaml
 spec:
   type: openapi
   lifecycle: experimental
