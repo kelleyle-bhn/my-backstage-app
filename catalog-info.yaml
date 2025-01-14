@@ -25,4 +25,4 @@ spec:
   lifecycle: experimental
   owner: kelley.le2@bhn.com
   definition: 
-    $text: https://raw.githubusercontent.com/kelleyle-bhn/my-backstage-app/main/packages/app/src/catalog/svc1-openapi.yaml
+    $yaml: https://raw.githubusercontent.com/kelleyle-bhn/my-backstage-app/main/packages/app/src/catalog/svc1-openapi.yaml
