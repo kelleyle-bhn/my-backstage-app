@@ -1,10 +1,12 @@
-# list of all new entities and their details
+# list of all new entities and their details to be imported
 
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: service-chain-svc1
   description: Calls the first service in the chain (Spring Boot).
+  annotations:
+    backstage.io/techdocs-ref: dir:.
   tags:
     - springboot
     - backend
