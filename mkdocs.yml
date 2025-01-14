@@ -1,7 +1,10 @@
-site_name: 'example-docs'
+# makes documentation
+
+site_name: 'Service Chain Documentation'
+site_description: This is where the documentation for the service chain is.
+plugins:
+  - techdocs-core
 
 nav:
   - Home: index.md
-
-plugins:
-  - techdocs-core
+  - About: about.md
