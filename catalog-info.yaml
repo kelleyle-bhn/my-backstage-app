@@ -11,7 +11,7 @@
 #   type: website
 #   owner: john@example.com
 #   lifecycle: experimental
-# ---
+---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
@@ -20,6 +20,11 @@ metadata:
   owner: kelley.le2@bhn.com
   links:
     - url: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/catalog-info.yaml
+  tags:
+    - springboot
+    - backend
+    - experimental
+    - api
 spec:
   type: openapi
   lifecycle: experimental
