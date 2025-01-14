@@ -1,3 +1,5 @@
+# list of all entities and their details
+
 # apiVersion: backstage.io/v1alpha1
 # kind: Component
 # metadata:
@@ -15,21 +17,50 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: service-chain
-  description: Calls a chain of Spring Boot backend services that prints a message.
+  name: service-chain-svc1
+  description: Calls the first service in the chain (Spring Boot).
   owner: kelley.le2@bhn.com
-  links:
-    - url: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/catalog-info.yaml
   tags:
     - springboot
     - backend
-    - experimental
     - api
 spec:
   type: openapi
   lifecycle: experimental
   owner: kelley.le2@bhn.com
   definition: 
-    - $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc1-openapi.yaml
-    - $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc2-openapi.yaml
-    - $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc3-openapi.yaml
+    $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc1-openapi.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: service-chain-svc2
+  description: Calls the second service in the chain (Spring Boot).
+  owner: kelley.le2@bhn.com
+  tags:
+    - springboot
+    - backend
+    - api
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: kelley.le2@bhn.com
+  definition: 
+    $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc2-openapi.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: service-chain-svc3
+  description: Calls the third service in the chain (Spring Boot).
+  owner: kelley.le2@bhn.com
+  tags:
+    - springboot
+    - backend
+    - api
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: kelley.le2@bhn.com
+  definition: 
+    $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/catalog/svc3-openapi.yaml
