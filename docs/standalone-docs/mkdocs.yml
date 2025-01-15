@@ -1,0 +1,9 @@
+# Service Chain Documentation Site
+
+site_name: 'Standalone Documentation'
+site_description: Standalone Documentation Overview
+plugins:
+  - techdocs-core
+
+nav:
+  - Home: index.md

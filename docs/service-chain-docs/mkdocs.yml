@@ -1,0 +1,14 @@
+# Service Chain Documentation Site
+
+site_name: 'Service Chain Documentation'
+site_description: Service Chain Overview
+plugins:
+  - techdocs-core
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Service Chain:
+    - Service 1: svc1-doc.md
+    - Service 2: svc2-doc.md
+    - Service 3: svc3-doc.md
