@@ -1,10 +1,54 @@
 # List of all new entities and their details to be imported
 
+# Services
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: svc1
+  description: 1st service in chain
+  annotations:
+    backstage.io/techdocs-ref: dir:./docs/service-chain-docs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: bhn
+  providesApis: [svc1-api]
+  consumesApis: [svc2-api]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: svc2
+  description: 2nd service in chain
+  annotations:
+    backstage.io/techdocs-ref: dir:./docs/service-chain-docs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: bhn
+  providesApis: [svc2-api]
+  consumesApis: [svc3-api]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: svc3
+  description: 3rd service in chain
+  annotations:
+    backstage.io/techdocs-ref: dir:./docs/service-chain-docs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: bhn
+  providesApis: [svc3-api]
+---
+
+# Openapis
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: service-chain-svc1
-  description: Calls the first service in the chain (Spring Boot).
+  name: svc1-api
+  description: Service 1 API
   annotations:
     backstage.io/techdocs-ref: dir:./docs/service-chain-docs
   tags:
@@ -23,8 +67,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: service-chain-svc2
-  description: Calls the second service in the chain (Spring Boot).
+  name: svc2-api
+  description: Service 2 API
   annotations:
     backstage.io/techdocs-ref: dir:./docs/service-chain-docs
   tags:
@@ -43,8 +87,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: service-chain-svc3
-  description: Calls the third service in the chain (Spring Boot).
+  name: svc3-api
+  description: Service 3 API
   annotations:
     backstage.io/techdocs-ref: dir:./docs/service-chain-docs
   tags:
@@ -59,8 +103,9 @@ spec:
   owner: bhn
   definition: 
     $text: https://github.com/kelleyle-bhn/my-backstage-app/blob/main/packages/app/src/openapi/svc3-openapi.yaml
-
 ---
+
+# Documentation
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
