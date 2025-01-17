@@ -6,7 +6,7 @@
     "node": "20 || 22"
   },
   "scripts": {
-    "dev": "yarn workspaces foreach -A --include backend --include app --parallel -v -i run start",
+    "dev": "dotenv -e .env -- yarn workspaces foreach -A --include backend --include app --parallel -v -i run start",
     "start": "yarn workspace app start",
     "start-backend": "yarn workspace backend start",
     "build:backend": "yarn workspace backend build",
@@ -62,6 +62,7 @@
     "@mui/material": "^6.3.1",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
+    "dotenv-cli": "^8.0.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0"
   }
